@@ -52,58 +52,58 @@
     <div class="post">
   <h1>linux学习笔记</h1>
   <time datetime=2022-12-11T16:17:20&#43;0800 class="post-date">Sun, Dec 11, 2022</time>
-  <h2 id="1shell语法">1、shell语法</h2>
+  <h2 id="linux课程学习">linux课程学习</h2>
+<h5 id="1shell语法">1.shell语法</h5>
 <p>命令 选项 参数
 命令：整条shell命令的主体
 选项：会影响会微调整个命令的行为
-参数：命令作用的对象
-1、自动补全
-2、快捷键</p>
-<pre tabindex="0"><code>ctrl+C：终止前台运行的程序
-ctrl+D：相当于exit
-ctrl+L：清屏
-ctrl+A：光标移到命令行的前端
-ctrl+E：光标移到命令行的后端
-ctrl+K：删除光标后的所有字符
-ctrl+U：删除光标前的所有字符
-</code></pre><p>3、命令详解
-输出重定向
-方式一：正确输出：&gt; 等价于1&gt; ：将目标输出到文件中，会覆盖 &raquo;等价于1&raquo;： 将目标输出到文件中，追加到文件后
+参数：命令作用的对象</p>
+<h5 id="2快捷键">2、快捷键</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ctrl+C：终止前台运行的程序
+</span></span><span style="display:flex;"><span>ctrl+D：相当于exit
+</span></span><span style="display:flex;"><span>ctrl+L：清屏
+</span></span><span style="display:flex;"><span>ctrl+A：光标移到命令行的前端
+</span></span><span style="display:flex;"><span>ctrl+E：光标移到命令行的后端
+</span></span><span style="display:flex;"><span>ctrl+K：删除光标后的所有字符
+</span></span><span style="display:flex;"><span>ctrl+U：删除光标前的所有字符
+</span></span></code></pre></div><h5 id="3命令详解c">3、命令详解c++</h5>
+<h6 id="输出重定向">输出重定向</h6>
+<p>方式一：正确输出：&gt; 等价于1&gt; ：将目标输出到文件中，会覆盖 &raquo;等价于1&raquo;： 将目标输出到文件中，追加到文件后
 方式二：错误输出：2&gt;将错误命令输出到文件中 ，有覆盖作用 ，2&raquo;： 将错误命令输出到文件中 ，追加到文件后*
 方式三：&amp;&gt; 不管是正确输出还是错误输出都重定向到一个文件中
 实例：</p>
-<p><code>命令：ls /home/ /hfsadd 1&gt; yes.tst 2&gt; no.txt  通过1&gt;可将正确输出结果重定向到yes.txt中，并通过2&gt;将错误输出结果重定向到no.txt中。</code>
-输入重定向
-&lt; 或者 0&lt; 将文件中的内容作为CMD的输入
+<p><code>命令：ls /home/ /hfsadd 1&gt; yes.tst 2&gt; no.txt  通过1&gt;可将正确输出结果重定向到yes.txt中，并通过2&gt;将错误输出结果重定向到no.txt中。</code></p>
+<h6 id="输入重定向">输入重定向</h6>
+<p>&lt; 或者 0&lt; 将文件中的内容作为CMD的输入
 command file2 将 file1 作为 command 的输入，并将 command 的处理结果输出到 file2。
 重定向符号&laquo;，这个符号的作用是使用特定的分界符作为命令输入的结束标志，而不使用 Ctrl+D 键。</p>
-<pre tabindex="0"><code>[c.biancheng.net]$ wc -l &lt;&lt;END
-&gt; 123
-&gt; 789
-&gt; abc
-&gt; xyz
-&gt; END
-4
-
-[c.biancheng.net]$ cat &gt; test.txt &lt;&lt;END
-&gt; 123
-&gt; 789
-&gt; abc
-&gt; xyz
-&gt; END
-表示通过cat看内容，即EOF后内容，随后将内容写入test.txt中
-</code></pre><p>管道
-操作符是：”|”,它只能处理经由前面一个指令传出的正确输出信息，对错误信息信息没有直接处理能力。然后，传递给下一个命令，作为标准的输入.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>c.biancheng.net<span style="color:#f92672">]</span>$ wc -l <span style="color:#e6db74">&lt;&lt;END
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; 123
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; 789
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; abc
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; xyz
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; END</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>c.biancheng.net<span style="color:#f92672">]</span>$ cat &gt; test.txt <span style="color:#e6db74">&lt;&lt;END
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; 123
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; 789
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; abc
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; xyz
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt; END</span>
+</span></span><span style="display:flex;"><span>表示通过cat看内容，即EOF后内容，随后将内容写入test.txt中
+</span></span></code></pre></div><h6 id="管道">管道</h6>
+<p>操作符是：”|”,它只能处理经由前面一个指令传出的正确输出信息，对错误信息信息没有直接处理能力。然后，传递给下一个命令，作为标准的输入.
 管理命令的输出说明：</p>
-<p>tee命令：
-tee指令会从标准输入设备读取数据，将其内容输出到标准输出设备，同时保存成文件
+<h6 id="tee命令">tee命令：</h6>
+<p>tee指令会从标准输入设备读取数据，将其内容输出到标准输出设备，同时保存成文件
 xargs命令用法
 作用：用作替换工具，读取输入数据重新格式化后输出
 1、多行输入单行输出
 2、-n选项多行输出 例如：cat /home/ss.txt | xargs -n3 表示以三个字母为一行输出
 3、-d选项可以自定义一个定界符 表示以某个字符为界输出</p>
-<p>cut命令：
-正如其名，cut的工作就是“剪”，具体的说就是在文件中负责剪切数据用的。cut是以每一行为一个处理对象的，提取一列的字段，这种机制和sed是一样的。
+<h6 id="cut命令">cut命令：</h6>
+<p>正如其名，cut的工作就是“剪”，具体的说就是在文件中负责剪切数据用的。cut是以每一行为一个处理对象的，提取一列的字段，这种机制和sed是一样的。
 剪切依据
 cut命令主要是接受三个定位方法：
 第一，字节（bytes），用选项-b
@@ -121,62 +121,62 @@ cut 命令从文件的每一行剪切字节、字符和字段并将这些字节�
 -f ：与-d一起使用，指定显示哪个区域。
 -n ：取消分割多字节字符。仅和 -b 标志一起使用。如果字符的最后一个字节落在由 -b 标志的 List 参数指示的
 范围之内，该字符将被写出；否则，该字符将被排除。</p>
-<p>awk命令讲解
-awk是行处理器: 相比较屏幕处理的优点，在处理庞大文件时不会出现内存溢出或是处理缓慢的问题，通常用来格式化文本信息
+<h6 id="awk命令讲解">awk命令讲解</h6>
+<p>awk是行处理器: 相比较屏幕处理的优点，在处理庞大文件时不会出现内存溢出或是处理缓慢的问题，通常用来格式化文本信息
 awk处理过程:
 1、awk使用一行作为输入，并将这一行赋给内部变量$0，每一行也可称为一个记录，以换行符（RS）结束；
 2、每行被间隔符：（默认为空格活制表符）分解成字段，每个字段储存在已编好的变量中，从$1开始
 3、awk使用print函数打印字段，打印出来的字段以空格分隔，因为$1,$3之间有一个逗号，逗号比较特殊，它映射为另一个内部变量，称为输出字段分隔符OFS，OFS默认为空格
 4、awk处理完一行后，将从文件中获取另一行，并将其储存在$0中，覆盖原来的内容，然后将新的字符串分隔成字段并进行处理，该过程将持续到所有行处理完成。</p>
-<pre tabindex="0"><code>awk命令形式:  awk [-F|-f|-v] ‘BEGIN{} //{command1; command2} END{}’ file
-[-F|-f|-v]   大参数，-F指定分隔符，-f调用脚本，-v定义变量 var=value
-&#39;  &#39;          引用代码块
-BEGIN   初始化代码块，在对每一行进行处理之前，初始化代码，主要是引用全局变量，设置FS分隔符，注意：如果要手动设置分隔符，在分隔符开始要用BEGIN
-//           匹配代码块，可以是字符串或正则表达式
-{}           命令代码块，包含一条或多条命令
-；          多条命令使用分号分隔
-END      结尾代码块，在对每一行进行处理之后再执行的代码块，主要是进行最终计算或输出结尾摘要信息
-**特殊要点:**
-$0           表示整个当前行，整行全部内容，awk &#39;{print $0}&#39; copy.txt
-$1           每行第一个字段，类似的$2  $3 $4 $5
-NF          字段数量变量   cat /etc/passwd | awk -F: &#39;{print NF}&#39;，即为一共有多少列全部打印出来
-$NF        表示打印最后一列，如果要往前则是$(NF-1)
-NR          每行的记录号，多文件记录递增，比如打印1到5行，则是awk &#39;NR==1,NR==5{print $0}&#39;
-FNR        与NR类似，不过多文件记录不递增，每个文件都从1开始
-\t            制表符
-\n           换行符
-FS          BEGIN时定义分隔符，可以理解为F的作用
-OFS       输出字段分隔符， 默认也是空格，可以改为制表符等,意思是将输出字段按指定分隔符衔接
-~            匹配，与==相比不是精确比较
-!~           不匹配，不精确比较
-==         等于，必须全部相等，精确比较
-!=           不等于，精确比较
-&amp;&amp;　     逻辑与
-||             逻辑或
-+            匹配时表示1个或1个以上
-/[0-9][0-9]+/   两个或两个以上数字
-/[0-9][0-9]*/    一个或一个以上数字
-FILENAME 文件名
-ORS         输出的记录分隔符，默认为换行符,即处理结果也是一行一行输出到屏幕
-RS       输入的记录分隔符， 默认为换行符(即文本是按一行一行输入)
--F&#39;[:#/]&#39;   定义三个分隔符
-例如：awk &#39; $6&gt;=20{ print $1},在输出时候先进行判断
-</code></pre><p><strong>sed命令</strong>
-sed是一种几乎包括在所有unix平台的轻量级流编辑器，sed主要是用来将数据进行选取，替换，删除，新增的命令。</p>
-<pre tabindex="0"><code>**语法：sed  [选项]  ‘[动作]’  文件名**
-选项：
--n：一般sed命令会把所有数据都输出到屏幕，如果加入此选择，则只会把经过sed命令处理的行输出到屏幕
--e：允许对输入数据应用多条sed命令编辑
--i： 用sed的修改结果直接修改读取数据的文件，而不是由屏幕输出
-
-动作：
-a\ ：追加，在当前行后添加一行或多行
-c \：行替换，用c后面的字符串替换原数据行
-i \：插入，在当前行前插入一行或者多行
-d：删除指定行
-p：打印指定行
-s：字符串替换，格式为  “行范围s/旧字符/新字符/g”
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>awk命令形式:  awk <span style="color:#f92672">[</span>-F|-f|-v<span style="color:#f92672">]</span> ‘BEGIN<span style="color:#f92672">{}</span> //<span style="color:#f92672">{</span>command1; command2<span style="color:#f92672">}</span> END<span style="color:#f92672">{}</span>’ file
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>-F|-f|-v<span style="color:#f92672">]</span>   大参数，-F指定分隔符，-f调用脚本，-v定义变量 var<span style="color:#f92672">=</span>value
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;  &#39;</span>          引用代码块
+</span></span><span style="display:flex;"><span>BEGIN   初始化代码块，在对每一行进行处理之前，初始化代码，主要是引用全局变量，设置FS分隔符，注意：如果要手动设置分隔符，在分隔符开始要用BEGIN
+</span></span><span style="display:flex;"><span>//           匹配代码块，可以是字符串或正则表达式
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{}</span>           命令代码块，包含一条或多条命令
+</span></span><span style="display:flex;"><span>；          多条命令使用分号分隔
+</span></span><span style="display:flex;"><span>END      结尾代码块，在对每一行进行处理之后再执行的代码块，主要是进行最终计算或输出结尾摘要信息
+</span></span><span style="display:flex;"><span>**特殊要点:**
+</span></span><span style="display:flex;"><span>$0           表示整个当前行，整行全部内容，awk <span style="color:#e6db74">&#39;{print $0}&#39;</span> copy.txt
+</span></span><span style="display:flex;"><span>$1           每行第一个字段，类似的$2  $3 $4 $5
+</span></span><span style="display:flex;"><span>NF          字段数量变量   cat /etc/passwd | awk -F: <span style="color:#e6db74">&#39;{print NF}&#39;</span>，即为一共有多少列全部打印出来
+</span></span><span style="display:flex;"><span>$NF        表示打印最后一列，如果要往前则是<span style="color:#66d9ef">$(</span>NF-1<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>NR          每行的记录号，多文件记录递增，比如打印1到5行，则是awk <span style="color:#e6db74">&#39;NR==1,NR==5{print $0}&#39;</span>
+</span></span><span style="display:flex;"><span>FNR        与NR类似，不过多文件记录不递增，每个文件都从1开始
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">\t</span>            制表符
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">\n</span>           换行符
+</span></span><span style="display:flex;"><span>FS          BEGIN时定义分隔符，可以理解为F的作用
+</span></span><span style="display:flex;"><span>OFS       输出字段分隔符， 默认也是空格，可以改为制表符等,意思是将输出字段按指定分隔符衔接
+</span></span><span style="display:flex;"><span>~            匹配，与<span style="color:#f92672">==</span>相比不是精确比较
+</span></span><span style="display:flex;"><span>!~           不匹配，不精确比较
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>         等于，必须全部相等，精确比较
+</span></span><span style="display:flex;"><span>!<span style="color:#f92672">=</span>           不等于，精确比较
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&amp;&amp;</span>　     逻辑与
+</span></span><span style="display:flex;"><span><span style="color:#f92672">||</span>             逻辑或
+</span></span><span style="display:flex;"><span>+            匹配时表示1个或1个以上
+</span></span><span style="display:flex;"><span>/<span style="color:#f92672">[</span>0-9<span style="color:#f92672">][</span>0-9<span style="color:#f92672">]</span>+/   两个或两个以上数字
+</span></span><span style="display:flex;"><span>/<span style="color:#f92672">[</span>0-9<span style="color:#f92672">][</span>0-9<span style="color:#f92672">]</span>*/    一个或一个以上数字
+</span></span><span style="display:flex;"><span>FILENAME 文件名
+</span></span><span style="display:flex;"><span>ORS         输出的记录分隔符，默认为换行符,即处理结果也是一行一行输出到屏幕
+</span></span><span style="display:flex;"><span>RS       输入的记录分隔符， 默认为换行符<span style="color:#f92672">(</span>即文本是按一行一行输入<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>-F<span style="color:#e6db74">&#39;[:#/]&#39;</span>   定义三个分隔符
+</span></span><span style="display:flex;"><span>例如：awk <span style="color:#960050;background-color:#1e0010">&#39;</span> $6&gt;<span style="color:#f92672">=</span>20<span style="color:#f92672">{</span> print $1<span style="color:#f92672">}</span>,在输出时候先进行判断
+</span></span></code></pre></div><h6 id="sed命令">sed命令</h6>
+<p>sed是一种几乎包括在所有unix平台的轻量级流编辑器，sed主要是用来将数据进行选取，替换，删除，新增的命令。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>**语法：sed  <span style="color:#f92672">[</span>选项<span style="color:#f92672">]</span>  ‘<span style="color:#f92672">[</span>动作<span style="color:#f92672">]</span>’  文件名**
+</span></span><span style="display:flex;"><span>选项：
+</span></span><span style="display:flex;"><span>-n：一般sed命令会把所有数据都输出到屏幕，如果加入此选择，则只会把经过sed命令处理的行输出到屏幕
+</span></span><span style="display:flex;"><span>-e：允许对输入数据应用多条sed命令编辑
+</span></span><span style="display:flex;"><span>-i： 用sed的修改结果直接修改读取数据的文件，而不是由屏幕输出
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>动作：
+</span></span><span style="display:flex;"><span>a<span style="color:#ae81ff">\ </span>：追加，在当前行后添加一行或多行
+</span></span><span style="display:flex;"><span>c <span style="color:#ae81ff">\：</span>行替换，用c后面的字符串替换原数据行
+</span></span><span style="display:flex;"><span>i <span style="color:#ae81ff">\：</span>插入，在当前行前插入一行或者多行
+</span></span><span style="display:flex;"><span>d：删除指定行
+</span></span><span style="display:flex;"><span>p：打印指定行
+</span></span><span style="display:flex;"><span>s：字符串替换，格式为  “行范围s/旧字符/新字符/g”
+</span></span></code></pre></div>
 </div>
 
 
