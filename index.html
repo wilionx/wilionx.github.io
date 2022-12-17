@@ -155,7 +155,7 @@
                 </path>
               </svg>
               Posts
-              <span class="Counter">1</span>
+              <span class="Counter">2</span>
             </a>
           </nav>
           <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
@@ -389,7 +389,7 @@
         </path>
       </svg>
       Posts
-      <span class="Counter ">1</span>
+      <span class="Counter ">2</span>
     </a>
   </nav>
 </div>
@@ -413,6 +413,44 @@
           Popular posts
         </h2>
         <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
+          
+          <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+            <div
+              class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
+              <div class="pinned-item-list-item-content">
+                <div class="d-flex width-full flex-items-center position-relative">
+                  <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+                    width="16" height="16">
+                    <path fill-rule="evenodd"
+                      d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+                    </path>
+                  </svg>
+                  <a class="text-bold flex-auto min-width-0" href="https://wilionx.github.io/post/dzybj/">
+                    <span class="repo" title="linux大作业步骤">linux大作业步骤</span>
+                  </a>
+                </div>
+
+
+                <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
+                  Linux大作业步骤 1.在Linux下，安装git，使用git管理大作业相关的代码、配置文件等，要求有能反映大作业过程的git提交记录。 安装完成后，在gitee上建立本项目仓库
+配置本地账户密码：
+git config --global user.name &#34;wilionx&#34; git config --global user.email &#34;1643477409@qq.com&#34; 输入如下查看：
+git config --list --global 建立远程连接
+git remote add origin https://gitee.com/wilionx/linuxzuoye.git 输入git init初始化仓库
+在要push的目录下输入
+git add . git commit -m &#34;test2&#34; git push -u origin &#34;master&#34; gitee提交记录
+2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
+server容器也是使用的ubuntu镜像，并以root用户的身份运行。它将主机的/home/wpx/docker/server目录挂载到容器的/root目录下，并且将容器的23456
+两个容器启动的配置参数：docker-compose.yml
+version: &#39;3&#39; services: master: image: ubuntu user: root volumes: \- /home/wpx/docker/master:/root ports: \- 12345:12345 stdin_open: true tty: true server: image: ubuntu user: root volumes: \- /home/wpx/docker/server:/root ports: \- 23456:23456 stdin_open: true tty: true 服务端代码：
+                </div>
+
+                <p class="mb-0 f6 text-gray">
+                  
+                </p>
+              </div>
+            </div>
+          </li>
           
           <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
             <div
@@ -452,6 +490,12 @@
 
     
     <div class="mt-4 position-relative" id="contributions" data='[
+{
+  "title": "linux%e5%a4%a7%e4%bd%9c%e4%b8%9a%e6%ad%a5%e9%aa%a4",
+  "link": "https://wilionx.github.io/post/dzybj/",
+  "publishDate": "2022-12-16%2016:17:20"
+},
+
 {
   "title": "linux%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0",
   "link": "https://wilionx.github.io/post/linuxkcxx/",

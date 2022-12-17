@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wilionx.github.io/post/linuxkcxx/</loc>
-    <lastmod>2022-12-11T16:17:20+08:00</lastmod>
+    <loc>https://wilionx.github.io/post/dzybj/</loc>
+    <lastmod>2022-12-16T16:17:20+08:00</lastmod>
   </url><url>
     <loc>https://wilionx.github.io/</loc>
-    <lastmod>2022-12-11T16:17:20+08:00</lastmod>
+    <lastmod>2022-12-16T16:17:20+08:00</lastmod>
   </url><url>
     <loc>https://wilionx.github.io/post/</loc>
+    <lastmod>2022-12-16T16:17:20+08:00</lastmod>
+  </url><url>
+    <loc>https://wilionx.github.io/post/linuxkcxx/</loc>
     <lastmod>2022-12-11T16:17:20+08:00</lastmod>
   </url><url>
     <loc>https://wilionx.github.io/categories/</loc>
