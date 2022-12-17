@@ -24,7 +24,8 @@ git config --global user.name &amp;#34;wilionx&amp;#34; git config --global user
 git config --list --global 建立远程连接
 git remote add origin https://gitee.com/wilionx/linuxzuoye.git 输入git init初始化仓库
 在要push的目录下输入
-git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录 2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
+git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录
+2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
 server容器也是使用的ubuntu镜像，并以root用户的身份运行。它将主机的/home/wpx/docker/server目录挂载到容器的/root目录下，并且将容器的23456
 两个容器启动的配置参数：docker-compose.yml
 version: &amp;#39;3&amp;#39; services: master: image: ubuntu user: root volumes: \- /home/wpx/docker/master:/root ports: \- 12345:12345 stdin_open: true tty: true server: image: ubuntu user: root volumes: \- /home/wpx/docker/server:/root ports: \- 23456:23456 stdin_open: true tty: true 服务端代码：" />
@@ -43,7 +44,8 @@ git config --global user.name &amp;#34;wilionx&amp;#34; git config --global user
 git config --list --global 建立远程连接
 git remote add origin https://gitee.com/wilionx/linuxzuoye.git 输入git init初始化仓库
 在要push的目录下输入
-git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录 2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
+git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录
+2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
 server容器也是使用的ubuntu镜像，并以root用户的身份运行。它将主机的/home/wpx/docker/server目录挂载到容器的/root目录下，并且将容器的23456
 两个容器启动的配置参数：docker-compose.yml
 version: &amp;#39;3&amp;#39; services: master: image: ubuntu user: root volumes: \- /home/wpx/docker/master:/root ports: \- 12345:12345 stdin_open: true tty: true server: image: ubuntu user: root volumes: \- /home/wpx/docker/server:/root ports: \- 23456:23456 stdin_open: true tty: true 服务端代码：" />
@@ -62,7 +64,8 @@ git config --global user.name &amp;#34;wilionx&amp;#34; git config --global user
 git config --list --global 建立远程连接
 git remote add origin https://gitee.com/wilionx/linuxzuoye.git 输入git init初始化仓库
 在要push的目录下输入
-git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录 2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
+git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录
+2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
 server容器也是使用的ubuntu镜像，并以root用户的身份运行。它将主机的/home/wpx/docker/server目录挂载到容器的/root目录下，并且将容器的23456
 两个容器启动的配置参数：docker-compose.yml
 version: &amp;#39;3&amp;#39; services: master: image: ubuntu user: root volumes: \- /home/wpx/docker/master:/root ports: \- 12345:12345 stdin_open: true tty: true server: image: ubuntu user: root volumes: \- /home/wpx/docker/server:/root ports: \- 23456:23456 stdin_open: true tty: true 服务端代码：" />
@@ -238,8 +241,8 @@ version: &amp;#39;3&amp;#39; services: master: image: ubuntu user: root volumes:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>git push -u origin <span style="color:#e6db74">&#34;master&#34;</span>
 </span></span></code></pre></div><p><img src="/4.png" alt="img"></p>
-<p>gitee提交记录
-<img src="/5.png" alt="img"></p>
+<p>gitee提交记录</p>
+<p><img src="/5.png" alt="img"></p>
 <h5 id="2在linux下利用-socket-技术编写程序包含客户端和服务端实现两者之间的信息传递">2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。</h5>
 <h6 id="a-加分项使用容器技术如docker或podman将socket客户端和服务端分别运行在不同的容器中实现socket客户端和服务端之间的信息传递">a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。</h6>
 <p>​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.</p>
@@ -370,16 +373,16 @@ version: &amp;#39;3&amp;#39; services: master: image: ubuntu user: root volumes:
 </span></span><span style="display:flex;"><span>    close(listenfd);  
 </span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><p>进入到docker-compose.yml所在的目录，执行如下命令启动容器</p>
-<p><img src="../../../static/6.png" alt="img"></p>
+<p><img src="/6.png" alt="img"></p>
 <p>获取ip，进入root目录，客户端执行./a运行，服务端执行./a 172.19.0.2运行，利用docker将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。</p>
-<p><img src="../../../static/7.png" alt="img"></p>
+<p><img src="/7.png" alt="img"></p>
 <h5 id="3hugo是一个静态网站生成器官网为httpsgohugoio查阅相关资料在linux下完成以下内容">3.Hugo是一个静态网站生成器，官网为：https://gohugo.io/，查阅相关资料，在Linux下，完成以下内容：</h5>
 <h6 id="a-配置好hugo相关环境">a) 配置好Hugo相关环境</h6>
-<p><img src="../../../static/8.png" alt="img"></p>
+<p><img src="/8.png" alt="img"></p>
 <h6 id="b-使用markdown语法编写网站内容至少要包含的内容linux课程中的学习笔记大作业完成步骤记录且要求有相关图片代码或命令">b) 使用Markdown语法编写网站内容，至少要包含的内容：Linux课程中的学习笔记、大作业完成步骤记录，且要求有相关图片、代码或命令</h6>
 <h6 id="c-使用hugo将上述内容生成静态网站部署到web服务器如nginx或apache访问web服务器测试可以正常访问">c) 使用Hugo，将上述内容生成静态网站，部署到Web服务器（如Nginx或Apache），访问Web服务器，测试可以正常访问。</h6>
 <p>部署Web服务器，首先开启apache：</p>
-<p><img src="../../../static/9.png" alt="img"></p>
+<p><img src="/9.png" alt="img"></p>
 <p>然后再myhugo目录下输入hugo生成public文件夹，将public文件夹里的全部文件复制到/var/www/html中，即输入如下命令：</p>
 <p><code>cp -r public/* /var/www/html</code></p>
 <p>然后执行Ifconfig查看本机ip，最后在网页中输入本机ip，即可看到本地部署的Web服务器上的Hugo网页：
@@ -392,6 +395,7 @@ version: &amp;#39;3&amp;#39; services: master: image: ubuntu user: root volumes:
 </span></span><span style="display:flex;"><span>git commit -m “hugo”
 </span></span><span style="display:flex;"><span>git push -u origin master 
 </span></span></code></pre></div><p>最后在在浏览器中输入wilionx.github.io, 如下所示：</p>
+<p><img src="/12.png" alt="img"></p>
 </article>
               </div>
             </div>
