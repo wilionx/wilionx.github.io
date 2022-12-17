@@ -19,8 +19,7 @@ git config --global user.name &amp;#34;wilionx&amp;#34; git config --global user
 git config --list --global 建立远程连接
 git remote add origin https://gitee.com/wilionx/linuxzuoye.git 输入git init初始化仓库
 在要push的目录下输入
-git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录
-2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
+git add . git commit -m &amp;#34;test2&amp;#34; git push -u origin &amp;#34;master&amp;#34; gitee提交记录 2.在Linux下，利用 socket 技术编写程序，包含客户端和服务端，实现两者之间的信息传递。 a) 加分项使用容器技术（如Docker或Podman），将socket客户端和服务端分别运行在不同的容器中，实现socket客户端和服务端之间的信息传递。 ​	master容器使用的镜像是ubuntu，并且以root用户的身份运行。它将主机的/home/wpx/docker/master目录挂载到容器的/root目录下，并目将容器的12345端口映射到主机的12345端口。启动该容器时，会打开标准输入流，并开启tty终端.
 server容器也是使用的ubuntu镜像，并以root用户的身份运行。它将主机的/home/wpx/docker/server目录挂载到容器的/root目录下，并且将容器的23456
 两个容器启动的配置参数：docker-compose.yml
 version: &amp;#39;3&amp;#39; services: master: image: ubuntu user: root volumes: \- /home/wpx/docker/master:/root ports: \- 12345:12345 stdin_open: true tty: true server: image: ubuntu user: root volumes: \- /home/wpx/docker/server:/root ports: \- 23456:23456 stdin_open: true tty: true 服务端代码：</description>
